@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f4f2ed" />
+  <title>Persona — Creator licensing, made human</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Persona home">
+        <span class="brand-mark">p</span><span>persona</span>
+      </a>
+
+      <nav class="nav" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview" data-page="overview"><span class="icon">⌂</span>Overview</a>
+        <a class="nav-item" href="#creators" data-page="creators"><span class="icon">♙</span>Creators</a>
+        <a class="nav-item" href="#studio" data-page="studio"><span class="icon">✦</span>Ad studio</a>
+        <a class="nav-item" href="#campaigns" data-page="campaigns"><span class="icon">▱</span>Campaigns</a>
+        <a class="nav-item" href="#payments" data-page="payments"><span class="icon">↗</span>Payments</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="impact-card">
+          <span class="eyebrow">CREATOR IMPACT</span>
+          <strong>$18,420</strong>
+          <p>Paid directly to creators this month.</p>
+          <div class="impact-row"><span>68% avg. share</span><span>↗ 12%</span></div>
+        </div>
+        <button class="account">
+          <span class="avatar small">AK</span>
+          <span><b>Arc & Kind</b><small>Brand account</small></span>
+          <span class="chevron">⌄</span>
+        </button>
+      </div>
+    </aside>
+
+    <main>
+      <header class="topbar">
+        <div class="mobile-brand"><span class="brand-mark">p</span>persona</div>
+        <div class="top-actions">
+          <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+          <button class="icon-btn notification" aria-label="Notifications">♢<i></i></button>
+          <button class="primary-btn" id="createAdBtn"><span>✦</span>Create ad</button>
+        </div>
+      </header>
+
+      <section class="page active" id="overview">
+        <div class="hero-copy">
+          <div>
+            <span class="date" id="today">FRIDAY, AUG 14</span>
+            <h1>Good morning, Alex.</h1>
+            <p>Your campaigns are performing well. Here’s what’s happening.</p>
+          </div>
+          <div class="trust-pill"><span>✓</span><div><b>Consent protected</b><small>Every active persona is verified</small></div></div>
+        </div>
+
+        <div class="metric-grid">
+          <article class="metric-card">
+            <div class="metric-head"><span>ACTIVE CAMPAIGNS</span><i>▱</i></div>
+            <div class="metric-value">12 <em>+3</em></div>
+            <p>vs. last month</p>
+            <svg class="spark" viewBox="0 0 220 44" preserveAspectRatio="none"><path d="M0 35 C22 36 30 23 48 28 S76 32 90 18 S116 30 134 19 S160 24 177 11 S201 13 220 3"/><path class="fill" d="M0 35 C22 36 30 23 48 28 S76 32 90 18 S116 30 134 19 S160 24 177 11 S201 13 220 3 L220 44 L0 44Z"/></svg>
+          </article>
+          <article class="metric-card">
+            <div class="metric-head"><span>CREATOR PAYOUTS</span><i>↗</i></div>
+            <div class="metric-value">$24.8k <em>+18%</em></div>
+            <p>this month</p>
+            <div class="bar"><i style="width:72%"></i></div>
+            <div class="bar-label"><span>Paid $18.4k</span><span>Pending $6.4k</span></div>
+          </article>
+          <article class="metric-card">
+            <div class="metric-head"><span>GENERATED ASSETS</span><i>✦</i></div>
+            <div class="metric-value">348 <em>+42</em></div>
+            <p>this month</p>
+            <div class="mini-avatars"><span class="photo a1"></span><span class="photo a2"></span><span class="photo a3"></span><span class="more">+15</span><small>personas used</small></div>
+          </article>
+        </div>
+
+        <div class="content-grid">
+          <section class="panel performance-panel">
+            <div class="panel-title"><div><h2>Campaign performance</h2><p>Spend and creator earnings over time</p></div><select aria-label="Date range"><option>Last 30 days</option><option>Last 7 days</option><option>Last 90 days</option></select></div>
+            <div class="chart-legend"><span><i class="dot dark"></i>Ad spend <b>$36,240</b></span><span><i class="dot green"></i>Creator earnings <b>$24,818</b></span></div>
+            <div class="chart" id="chart">
+              <div class="y-axis"><span>$15k</span><span>$10k</span><span>$5k</span><span>$0</span></div>
+              <div class="chart-area"><div class="grid-line"></div><div class="grid-line"></div><div class="grid-line"></div><svg viewBox="0 0 700 190" preserveAspectRatio="none"><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9cb91" stop-opacity=".35"/><stop offset="1" stop-color="#b9cb91" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 165 C60 155 78 125 130 138 S220 120 267 130 S345 83 397 96 S476 47 526 70 S617 18 700 30 L700 190 L0 190Z"/><path class="line green" d="M0 165 C60 155 78 125 130 138 S220 120 267 130 S345 83 397 96 S476 47 526 70 S617 18 700 30"/><path class="line charcoal" d="M0 150 C50 145 90 113 137 120 S212 95 264 107 S338 58 395 75 S477 25 530 45 S625 7 700 14"/></svg><div class="x-axis"><span>Jul 16</span><span>Jul 22</span><span>Jul 28</span><span>Aug 3</span><span>Aug 9</span><span>Aug 14</span></div></div>
+            </div>
+          </section>
+
+          <section class="panel personas-panel">
+            <div class="panel-title"><div><h2>Top personas</h2><p>By campaign revenue</p></div><button class="text-btn" data-target="creators">View all →</button></div>
+            <div class="persona-list">
+              <div class="persona-row"><span class="rank">01</span><span class="photo maya"></span><div><b>Maya Chen</b><small>Wellness · 1.2m</small></div><strong>$8,420<small>72% share</small></strong></div>
+              <div class="persona-row"><span class="rank">02</span><span class="photo theo"></span><div><b>Theo Brooks</b><small>Travel · 840k</small></div><strong>$6,290<small>65% share</small></strong></div>
+              <div class="persona-row"><span class="rank">03</span><span class="photo lina"></span><div><b>Lina Ortiz</b><small>Beauty · 610k</small></div><strong>$4,840<small>70% share</small></strong></div>
+              <div class="persona-row"><span class="rank">04</span><span class="photo jamal"></span><div><b>Jamal Rivers</b><small>Fitness · 480k</small></div><strong>$3,680<small>68% share</small></strong></div>
+            </div>
+          </section>
+        </div>
+
+        <section class="panel recent-panel">
+          <div class="panel-title"><div><h2>Recent campaigns</h2><p>Latest brand work across your team</p></div><button class="text-btn" data-target="campaigns">View all campaigns →</button></div>
+          <div class="campaign-table">
+            <div class="table-row header"><span>CAMPAIGN</span><span>PERSONA</span><span>STATUS</span><span>CREATOR SHARE</span><span>REVENUE</span><span></span></div>
+            <div class="table-row"><span class="campaign-name"><i class="campaign-thumb t1"></i><span><b>Morning ritual</b><small>Everwell · Instagram</small></span></span><span class="person-cell"><i class="photo maya"></i>Maya Chen</span><span><i class="status live">● Live</i></span><span><b>72%</b></span><span><b>$12,480</b></span><button class="more-btn">•••</button></div>
+            <div class="table-row"><span class="campaign-name"><i class="campaign-thumb t2"></i><span><b>Move freely</b><small>North Studio · TikTok</small></span></span><span class="person-cell"><i class="photo jamal"></i>Jamal Rivers</span><span><i class="status review">● Review</i></span><span><b>68%</b></span><span><b>$8,240</b></span><button class="more-btn">•••</button></div>
+            <div class="table-row"><span class="campaign-name"><i class="campaign-thumb t3"></i><span><b>Weekend away</b><small>Roam · Multi-channel</small></span></span><span class="person-cell"><i class="photo theo"></i>Theo Brooks</span><span><i class="status draft">● Draft</i></span><span><b>65%</b></span><span><b>—</b></span><button class="more-btn">•••</button></div>
+          </div>
+        </section>
+      </section>
+
+      <section class="page" id="creators">
+        <div class="section-heading"><div><span class="date">CONSENTED CREATOR NETWORK</span><h1>Find your next face.</h1><p>Every persona is identity-verified, actively consented, and fairly compensated.</p></div><button class="secondary-btn">Filters <span>⌄</span></button></div>
+        <div class="creator-grid" id="creatorGrid"></div>
+      </section>
+
+      <section class="page" id="campaigns">
+        <div class="section-heading"><div><span class="date">CAMPAIGN LIBRARY</span><h1>Work in motion.</h1><p>Review, approve, and measure every generated campaign.</p></div><button class="primary-btn open-studio">✦ New campaign</button></div>
+        <div class="empty-feature"><div class="preview-card"><img src="assets/mara-campaign.png" alt="Generated wellness campaign preview"><div class="preview-copy"><span>EVERWELL</span><strong>Move well.<br>Live gently.</strong><small>Generated with Maya's approved persona</small></div></div><div><span class="status live">● Live campaign</span><h2>Morning ritual</h2><p>24 generated assets across Instagram and display. Maya earns 72% of every licensing dollar.</p><button class="secondary-btn">View performance →</button></div></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="studioModal" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" aria-label="Close">×</button>
+      <div class="modal-head"><span class="date">AD STUDIO / NEW GENERATION</span><h2 id="modalTitle">Create with consent.</h2><p>Build a campaign using only the usage rights your creator approved.</p></div>
+      <div class="stepper"><span class="active">1 <b>Persona</b></span><i></i><span>2 <b>Creative</b></span><i></i><span>3 <b>Review</b></span></div>
+      <div class="modal-body">
+        <label class="field-label">SELECT PERSONA</label>
+        <button class="persona-select"><span class="photo maya"></span><span><b>Maya Chen</b><small>Wellness · Image & video rights</small></span><i>72% creator share</i><em>⌄</em></button>
+        <div class="rights-box"><span>✓</span><div><b>Usage rights checked</b><p>Paid social, organic social, and digital display are approved through Dec 31, 2026. No political, alcohol, or medical claims.</p></div></div>
+        <label class="field-label" for="brief">CREATIVE BRIEF</label>
+        <textarea id="brief" placeholder="Describe the campaign you want to create…">Morning wellness campaign for our new reusable bottle. Warm, authentic, editorial lighting.</textarea>
+      </div>
+      <div class="modal-footer"><button class="secondary-btn modal-close-btn">Cancel</button><button class="primary-btn" id="continueBtn">Continue to creative <span>→</span></button></div>
+    </div>
+  </div>
+  <div class="toast" id="toast"><span>✓</span><div><b>Creative brief saved</b><small>Your consent rules are attached.</small></div></div>
+  <script src="app.js"></script>
+</body>
+</html>
