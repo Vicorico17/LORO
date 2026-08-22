@@ -42,4 +42,27 @@ document.querySelector('#searchBtn').addEventListener('click', () => {
   showPage('creators'); setTimeout(() => toast.classList.add('show'),150); setTimeout(() => toast.classList.remove('show'),2800);
 });
 
+const pickCount = document.querySelector('#pickCount');
+const opportunityCards = [...document.querySelectorAll('.opportunity-card')];
+const selectedCampaigns = new Set();
+
+function updatePickCount(){
+  pickCount.textContent = `${selectedCampaigns.size} selected`;
+}
+
+opportunityCards.forEach(card => card.querySelector('.pick-btn').addEventListener('click', () => {
+  const campaign = card.dataset.campaign;
+  const selected = selectedCampaigns.has(campaign);
+  if(selected) selectedCampaigns.delete(campaign);
+  else selectedCampaigns.add(campaign);
+  card.classList.toggle('selected', !selected);
+  card.querySelector('.pick-icon').textContent = selected ? '＋' : '✓';
+  card.querySelector('.pick-label').textContent = selected ? 'Pick campaign' : 'Selected';
+  updatePickCount();
+  toast.querySelector('b').textContent = selected ? 'Campaign removed' : 'Campaign selected';
+  toast.querySelector('small').textContent = selected ? 'You can pick it again any time.' : 'The brand will review your application.';
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2800);
+}));
+
 document.querySelectorAll('.more-btn').forEach(btn => btn.addEventListener('click', () => { toast.querySelector('b').textContent='Campaign actions opened'; toast.querySelector('small').textContent='Reporting, duplicate, and archive are available.'; toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'),2600); }));

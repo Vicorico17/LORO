@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#f4f2ed" />
-  <title>Persona — Creator licensing, made human</title>
+  <title>Loro — Creator licensing, made human</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,8 +13,8 @@
 <body>
   <div class="app-shell">
     <aside class="sidebar">
-      <a class="brand" href="#" aria-label="Persona home">
-        <span class="brand-mark">p</span><span>persona</span>
+      <a class="brand" href="#" aria-label="Loro home">
+        <span class="brand-mark">l</span><span>loro</span>
       </a>
 
       <nav class="nav" aria-label="Main navigation">
@@ -42,7 +42,7 @@
 
     <main>
       <header class="topbar">
-        <div class="mobile-brand"><span class="brand-mark">p</span>persona</div>
+        <div class="mobile-brand"><span class="brand-mark">l</span>loro</div>
         <div class="top-actions">
           <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
           <button class="icon-btn notification" aria-label="Notifications">♢<i></i></button>
@@ -120,7 +120,15 @@
       </section>
 
       <section class="page" id="campaigns">
-        <div class="section-heading"><div><span class="date">CAMPAIGN LIBRARY</span><h1>Work in motion.</h1><p>Review, approve, and measure every generated campaign.</p></div><button class="primary-btn open-studio">✦ New campaign</button></div>
+        <div class="section-heading"><div><span class="date">CAMPAIGN LIBRARY</span><h1>Choose work that fits.</h1><p>Creators can review eligible campaigns and pick the ones they want to participate in.</p></div><button class="primary-btn open-studio">✦ New campaign</button></div>
+        <section class="creator-picks panel">
+          <div class="panel-title"><div><span class="date">CREATOR CAMPAIGN PICKS</span><h2>Open opportunities</h2><p>Choose freely. You can change your mind before the campaign starts.</p></div><span class="pick-count" id="pickCount">0 selected</span></div>
+          <div class="campaign-opportunities" id="campaignOpportunities">
+            <article class="opportunity-card" data-campaign="Everwell · Morning ritual"><div class="opportunity-art art-wellness"><span>EVERWELL</span><strong>Move well.<br>Live gently.</strong></div><div class="opportunity-copy"><div><span class="status live">● Open</span><span class="opportunity-deadline">Apply by Aug 28</span></div><h3>Morning ritual</h3><p>Reusable bottle launch with warm, editorial wellness stories.</p><div class="opportunity-meta"><span>INSTAGRAM + DISPLAY</span><b>72% creator share</b></div><button class="pick-btn" type="button"><span class="pick-icon">＋</span><span class="pick-label">Pick campaign</span></button></div></article>
+            <article class="opportunity-card" data-campaign="North Studio · Move freely"><div class="opportunity-art art-fitness"><span>NORTH STUDIO</span><strong>Find your<br>move.</strong></div><div class="opportunity-copy"><div><span class="status live">● Open</span><span class="opportunity-deadline">Apply by Sep 2</span></div><h3>Move freely</h3><p>Performance apparel stories for people who train their own way.</p><div class="opportunity-meta"><span>TIKTOK + SHORTS</span><b>68% creator share</b></div><button class="pick-btn" type="button"><span class="pick-icon">＋</span><span class="pick-label">Pick campaign</span></button></div></article>
+            <article class="opportunity-card" data-campaign="Roam · Weekend away"><div class="opportunity-art art-travel"><span>ROAM</span><strong>Go somewhere<br>good.</strong></div><div class="opportunity-copy"><div><span class="status live">● Open</span><span class="opportunity-deadline">Apply by Sep 5</span></div><h3>Weekend away</h3><p>A flexible travel diary for a slower, more considered escape.</p><div class="opportunity-meta"><span>MULTI-CHANNEL</span><b>65% creator share</b></div><button class="pick-btn" type="button"><span class="pick-icon">＋</span><span class="pick-label">Pick campaign</span></button></div></article>
+          </div>
+        </section>
         <div class="empty-feature"><div class="preview-card"><img src="assets/mara-campaign.png" alt="Generated wellness campaign preview"><div class="preview-copy"><span>EVERWELL</span><strong>Move well.<br>Live gently.</strong><small>Generated with Maya's approved persona</small></div></div><div><span class="status live">● Live campaign</span><h2>Morning ritual</h2><p>24 generated assets across Instagram and display. Maya earns 72% of every licensing dollar.</p><button class="secondary-btn">View performance →</button></div></div>
       </section>
     </main>
